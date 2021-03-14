@@ -1,12 +1,49 @@
+/*
+Devin Brueberg
+ CSC435 Adv Web App Development
+ Assignment 1 - index.css for index.js
+ March 14, 2021
+ Last Edited (Initials, Date, Edits):
+ */
+
+ /* The main color themes are described here. The entire color 
+    scheme for the page can be quickly updated with these css 
+    variables. The page width is set here.
+*/
+html {
+  /* The main theme colors are desired as orange and white but 
+     due to accessability they will need to be changed to something 
+     else in the final version.
+  */
+  --orange-theme: #f4731f; /* Orange #f4731f*/
+  --button-text: white; /* Black #030303*/
+  --logo-text: #f4731f; /* Black #030303 #f4731f*/
+  --nav-text: black;
+  --button-border: turquoise;
+  --button-border-width: 1px;
+  width: 100%;
+}
+
+/* The default font for the application is set here and everything 
+   will be centered on the screen
+*/
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 18px;
+  margin: auto;
+  width: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* The standard inputs will be 18px 
+*/
+body input {
+  font-size: 18px;
+}
+
+/* code will be displayed in the following font family 
+*/
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;

@@ -1,0 +1,61 @@
+/*
+Devin Brueberg
+ CSC435 Adv Web App Development
+ Assignment 1 - Login.css for Login.js component
+ March 14, 2021
+ Last Edited (Initials, Date, Edits):
+ */
+
+/*  The Login component main theme will be flex and centered
+*/
+.Login {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding: 3rem 1rem;
+}
+
+/*  The Login form itself will be flex and centered
+*/
+.Login form {
+    display: flex;
+    justify-content: center;
+}
+
+/*  The legend font will be increased to 20px and centered
+*/
+.Login legend {
+    font-size: 20px;
+    text-align: center;
+}
+
+/*  The form elements will be flex and column. They will 
+    align center
+*/
+.Login fieldset {
+    border: 0;
+    width: 55%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-items: center;
+    align-items: center;
+}
+
+/*  The actual form inputs will be set to a width of 15rem to 
+    be uniform
+*/
+.Login-input input {
+    width: 15rem;
+}
+
+/*  The Login submit button will be the standard button color 
+    scheme but will be padded and a little wider
+*/
+.Login-submit {
+    color: var(--button-text);
+    background: var(--orange-theme);
+    border: var(--button-border-width) solid var(--button-border);
+    padding: .3rem 1rem;
+    margin-top: .3rem;
+    width: 15.5rem;
+}

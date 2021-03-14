@@ -1,0 +1,50 @@
+/*
+Devin Brueberg
+ CSC435 Adv Web App Development
+ Assignment 1 - MainNav.css for MainNav.js component
+ March 14, 2021
+ Last Edited (Initials, Date, Edits):
+ */
+
+ /* The MainNav default will be grid so the logo and 
+    actual nav can be separate 
+*/
+.MainNav {
+    color: var(--nav-text);
+    border: 2px var(--orange-theme) solid;
+    max-width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 75px;
+    grid-template-columns: 75px 1fr;
+}
+
+/*  The logo will be the rightmost element and 
+    will be set to stay in the grid box
+*/
+#MainNav-logo {
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+    max-height: 100%;
+}
+
+/*  The logo img is set to not grow out of its box
+*/
+#MainNav-logo img {
+    max-height: 100%;
+}
+
+/*  The menu part of the nav will occupy the rightmost area 
+    and will wrap and row. It will flex in the allotted grid 
+    area
+*/
+.MainNav-menu {
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+    list-style: none;
+    padding: .1em .1em;
+    display: flex;
+    flex-flow: wrap row;
+    justify-content: space-evenly;
+    align-items: center;
+}

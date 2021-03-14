@@ -1,3 +1,10 @@
+// Devin Brueberg
+// CSC435 Adv Web App Development
+// Assignment 1 - App.js
+// March 12, 2021
+
+// Using React library in order to build components 
+// for the app
 import logo from './logo.svg';
 import './App.css';
 

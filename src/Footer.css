@@ -1,0 +1,48 @@
+/*
+Devin Brueberg
+ CSC435 Adv Web App Development
+ Assignment 1 - Footer.css for Footer.js component
+ March 14, 2021
+ Last Edited (Initials, Date, Edits):
+ */
+
+ /* The Footer component will be centered and displayed in 
+    flex with a max-height of 150px
+ */
+.Footer {
+    border: 2px var(--orange-theme) solid;
+    display: flex;
+    justify-content: center;
+    max-height: 150px;
+    padding: .3rem 1rem; 
+    margin-top: 0rem .3rem;
+}
+
+/* The logo span will be centered on the screen
+*/
+.Footer-logo span {
+    margin: auto;
+    max-width: 100%;
+}
+
+/*  The combined text and img log will be displayed center view 
+    and bold
+*/
+.Footer-logo {
+    color: var(--logo-text);
+    font-weight: bold;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-content: center;
+    max-height: 100%;
+    width: 100%;
+}
+
+/*  The logo img will not take up more than 75% of the footer area
+*/
+.Footer-logo img {
+    margin: auto;
+    max-height: 75%;
+    max-width: 75%;
+} 

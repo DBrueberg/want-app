@@ -1,0 +1,23 @@
+/*
+Devin Brueberg
+ CSC435 Adv Web App Development
+ Assignment 1 - Search.css for Search.js component
+ March 14, 2021
+ Last Edited (Initials, Date, Edits):
+ */
+
+ /* The label for the search bar is will not be shown. It exists 
+    for accessability
+*/
+.Search-hidden {
+    display: none;
+}
+
+/*  The submit button will have the standard color scheme that can be 
+    edited in index.css
+*/
+.Search-submit {
+    border: var(--button-border-width) solid var(--button-border);
+    color: var(--button-text);
+    background: var(--orange-theme);
+}
