@@ -1,0 +1,26 @@
+/*
+Devin Brueberg
+ CSC435 Adv Web App Development
+ Want Application - ShoppingCart.css
+ March 21, 2021
+ Last Edited (Initials, Date, Edits):
+ */
+
+/* The general layout of the shopping cart
+*/
+.ShoppingCart {
+    margin: auto;
+    border: solid black 2px;
+    max-width: 100%;
+}
+
+/*  The shopping cart product cards will 
+    display row wrap with the standard 
+    product card height and width
+*/
+.shoppingCartCards {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    margin: 1rem;
+}

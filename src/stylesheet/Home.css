@@ -1,0 +1,25 @@
+/*
+Devin Brueberg
+ CSC435 Adv Web App Development
+ Want Application - Home.css
+ March 21, 2021
+ Last Edited (Initials, Date, Edits):
+ */
+
+ /* Basic layout of the Home page. Equipped 
+    with a solid black border and a max 
+    width
+ */
+.Home {
+    margin: auto;
+    border: solid black 2px;
+    max-width: 100%;
+}
+
+/* Product cards will be displayed in flex row
+*/
+.productCards {
+    display: flex;
+    flex-flow: row nowrap;
+    margin: 1rem;
+}

@@ -36,6 +36,12 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/*  All headers will be center aligned
+*/
+h1, h2, h3 {
+  text-align: center;
+}
+
 /* The standard inputs will be 18px 
 */
 body input {
@@ -47,4 +53,8 @@ body input {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+#root {
+  width: 100%;
 }

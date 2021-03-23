@@ -1,0 +1,49 @@
+/*
+Devin Brueberg
+ CSC435 Adv Web App Development
+ Want Application - Product.css
+ March 21, 2021
+ Last Edited (Initials, Date, Edits):
+ */
+
+ /* Internal product cards will be displayed in 
+    column with no wrap with fixed rem dimensions. 
+*/
+.Product {
+    display: flex;
+    flex-flow: column nowrap;
+    border: 2px orange solid;
+    border-radius: 1rem;
+    width: 25rem;
+    height: 30rem;
+    /* flex-shrink: 1 0 auto; */
+    max-width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+/*  The product thumb images will not be more than 
+    200px wide
+*/
+.Product img {
+    max-width: 200px;
+}
+
+/*  The button has the same general theme as the rest of the 
+    application
+*/
+.ProductSubmit {
+    color: var(--button-text);
+    background: var(--orange-theme);
+    border: var(--button-border-width) solid var(--button-border);
+    padding: .15rem;
+}
+
+/*  The product quantity input will have a set rem width and 
+    text will be centered
+*/
+.ProductQuantity {
+    width: 2rem;
+    text-align: center;
+}

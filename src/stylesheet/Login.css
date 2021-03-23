@@ -1,7 +1,7 @@
 /*
 Devin Brueberg
  CSC435 Adv Web App Development
- Assignment 1 - Login.css for Login.js component
+ Want Application - Login.css for Login.js component
  March 14, 2021
  Last Edited (Initials, Date, Edits):
  */
@@ -51,7 +51,7 @@ Devin Brueberg
 /*  The Login submit button will be the standard button color 
     scheme but will be padded and a little wider
 */
-.Login-submit {
+.LoginSubmit {
     color: var(--button-text);
     background: var(--orange-theme);
     border: var(--button-border-width) solid var(--button-border);

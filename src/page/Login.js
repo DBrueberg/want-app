@@ -9,7 +9,7 @@
 // Importing React states to save variables
 import React, { useState } from 'react';
 // Importing style sheet
-import './Login.css';
+import '../stylesheet/Login.css';
 
 // Creating a class that will log the user in
 class Login extends React.Component {
@@ -71,7 +71,7 @@ class Login extends React.Component {
 
                         {/* Form input for user name */}
                         <div className="Login-input">
-                            <label for="formLoginUserName">
+                            <label htmlFor="formLoginUserName">
                                 User Id
                             </label>
                             <input type="text" name="loginName" id="formLoginUserName" 
@@ -80,7 +80,7 @@ class Login extends React.Component {
                         
                         {/* Form input for password */}
                         <div className="Login-input">
-                            <label for="formLoginPassword">
+                            <label htmlFor="formLoginPassword">
                                 Password
                             </label>
                             <input type="password" name="password" id="formLoginPassword" 
@@ -88,7 +88,7 @@ class Login extends React.Component {
                         </div>
                         
                         {/* This button will submit the form */}
-                        <input type="submit" className="Login-submit" value="Login">
+                        <input type="submit" className="LoginSubmit" value="Login">
                         </input>
 
                     </fieldset>

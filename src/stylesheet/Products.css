@@ -1,0 +1,21 @@
+/*
+Devin Brueberg
+ CSC435 Adv Web App Development
+ Want Application - Products.css
+ March 21, 2021
+ Last Edited (Initials, Date, Edits):
+ */
+
+/*  The main layout for the Products on the page
+*/
+.Products {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+/* Images will not be larger than 200px 
+*/
+.productImage {
+    height: 200px;
+}

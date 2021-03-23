@@ -7,7 +7,7 @@
 // Using React library in order to build components 
 // for the app and importing needed components
 import React from 'react';
-import './Search.css';
+import '../stylesheet/Search.css';
 
 // The search function will search the products for the entered data
 // ****IDEA IS SEARCH WILL USE THE DATA TO SEARCH THE PRODUCT DATA IN ORDER 
@@ -19,7 +19,7 @@ function Search() {
         <li>
             {/* This will be its own Search Component. Still researching hooks vs 
             class and how it will fall together with the rest of the project */}
-            <label className="Search-hidden" for="searchBar">Search</label>
+            <label className="Search-hidden" htmlFor="searchBar">Search</label>
             <input type="text" name="searchBar" id="searchBar" placeholder="Search"></input>
             <input type="submit" className="Search-submit" value="Search"></input>
         </li>

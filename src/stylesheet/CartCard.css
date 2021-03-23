@@ -1,0 +1,55 @@
+/*
+Devin Brueberg
+ CSC435 Adv Web App Development
+ Want Application - CartCard.css
+ March 21, 2021
+ Last Edited (Initials, Date, Edits):
+ */
+
+/*  CartCards are the products in the cart, they 
+    will display flex column nowrap in their 
+    containers
+*/
+.CartCard {
+    display: flex;
+    flex-flow: column nowrap;
+    border: 2px solid var(--orange-theme);
+    border-radius: 1rem;
+    width: 25rem;
+    height: 30rem;
+    flex-shrink: 1 0 auto;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+/* Images will not be more than 200px wide
+*/
+.cartCardImage {
+    max-width: 200px;
+}
+
+/* Standard theme button styling
+*/
+.cartCardSubmit {
+    color: var(--button-text);
+    background: var(--orange-theme);
+    border: var(--button-border-width) solid var(--button-border);
+    padding: .15rem;
+}
+
+/* Card quantity input will display center
+*/
+.cartCardQuantity {
+    width: 2rem;
+    text-align: center;
+}
+
+/* Standard theme button styling
+*/
+.cartCardRemove {
+    color: var(--button-text);
+    background: var(--orange-theme);
+    border: var(--button-border-width) solid var(--button-border);
+    padding: .15rem;
+}

@@ -1,0 +1,38 @@
+{   
+    "products": [
+        {
+            "id": 0,
+            "brand": "Nike",
+            "name": "Legend Essential",
+            "description": "Lightweight, flexible, and breathable.",
+            "category": "shoes",
+            "price": "64.95",
+            "image": "../productImage/productImageThumb/nikeLegendThumb.jpg"
+        },
+        {
+            "id": 1,
+            "brand": "Nike",
+            "name": "Air Mavin Low Mens Basketball Shoes",
+            "description": "Durable leather and synthetic upper with breathable mesh panels.",
+            "category":"shoes",
+            "price": "65.00",
+            "image": "../productImage/productImageThumb/nikeAirMavinThumb.jpg"
+        },
+        {
+            "id": 2,
+            "brand": "Under Armour",
+            "name": "Men's UA Project Rock 3 Training Shoes",
+            "description": "Lightweight and durable, excellent training shoes for lifting.",
+            "price": "140.00",
+            "image": "../productImage/productImageThumb/projectRock3Thumb.jpg"
+        },
+        {
+            "id": 3,
+            "brand": "Nike",
+            "name": "Air Vapormax Plus",
+            "description": "Rubber pods to keep you comfortable, unbeatable style.",
+            "price": "200.00",
+            "image": "../productImage/productImageThumb/vapormaxPlusThumb.jpg"
+        }
+    ]
+}
