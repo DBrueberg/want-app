@@ -3,11 +3,13 @@
 // Want Application - Cart.js
 // March 18, 2021
 // Last Edited (Initials, Date, Edits):
+// DAB, 3/31/2021, Added CartSummary.js component
 
 // Using React library in order to build components 
 // for the app and importing needed components
 import CartCard from '../component/CartCard';
-import '../stylesheet/ShoppingCart.css'
+import CartSummary from '../component/CartSummary';
+import '../stylesheet/ShoppingCart.css';
 
 
 /**
@@ -23,6 +25,22 @@ function ShoppingCart({cart=[], products=[], removeFromCart=f=>f, addToCart=f=>f
 
     // The const will hold an array of the products information in the cart
     const cartList = products.filter(product => cartCompare(cart, product));
+
+    function newCart(cart) {
+        let cart2 = []
+
+        for (let x = 0; x < cart.length; x++) {
+            for (let z = 0; z < cartList.length; z++) {
+                if (cart[x].id === cartList[z].id) {
+                    cart2 = [...cart2, {...cart[x],
+                        price: cartList[z].price, 
+                        name: cartList[z].name
+                    }]
+                }
+            }
+        }
+        return cart2;
+    }
     
 
     // The cartCompare() method compares returns true if the item is in the 
@@ -48,7 +66,7 @@ function ShoppingCart({cart=[], products=[], removeFromCart=f=>f, addToCart=f=>f
     const cartHeader = cart.length < 1 ? 
     "Your Cart is Empty!" : "Welcome to Your Cart";
 
-    
+
     // This const will construct and hold a list of CartCard objects that 
     // will display in the application
     const productList = cartList.map((product, key) =>
@@ -64,6 +82,13 @@ function ShoppingCart({cart=[], products=[], removeFromCart=f=>f, addToCart=f=>f
         // The ShoppingCart div will hold the title and contents of the 
         // shopping cart
         <div className="ShoppingCart">
+            <CartSummary cartList={newCart(cart)} cartSize={cart.length} cart={cart} />
+            {console.log(cartList)}
+            {console.log(cart.length)}
+            {console.log(cart)}
+            {console.log(products)}
+            {console.log(newCart(cart))}
+
             <h1>
                 {cartHeader}
             </h1>

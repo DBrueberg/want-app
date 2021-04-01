@@ -4,6 +4,8 @@ Devin Brueberg
  Want Application - Product.css
  March 21, 2021
  Last Edited (Initials, Date, Edits):
+ DAB, 03/27/2021, Updated buttons to material ui 
+    components and altered the styling
  */
 
  /* Internal product cards will be displayed in 
@@ -30,20 +32,40 @@ Devin Brueberg
     max-width: 200px;
 }
 
+/*  The product quantity input will have a set rem width and 
+    text will be centered
+*/
+.ProductQuantity {
+    width: 2rem;
+}
+
+/* The product input fields will be flex column format
+*/
+.productInput {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+/* The cart quantity will be centered with a little padding
+*/
+.cartQuantity {
+    align-self: center;
+    padding-bottom: .2rem;
+}
+
 /*  The button has the same general theme as the rest of the 
     application
 */
-.ProductSubmit {
+.Product Button {
+    font-weight: bold;
     color: var(--button-text);
     background: var(--orange-theme);
     border: var(--button-border-width) solid var(--button-border);
     padding: .15rem;
 }
 
-/*  The product quantity input will have a set rem width and 
-    text will be centered
+/*  On hover the button background will change color
 */
-.ProductQuantity {
-    width: 2rem;
-    text-align: center;
+.Product Button:hover {
+    background: black;
 }

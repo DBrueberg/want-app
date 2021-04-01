@@ -16,7 +16,7 @@ function Search() {
 
     return (
         // Basic search component wrapped in an li. Not functional yet
-        <li>
+        <li id="navSearch">
             {/* This will be its own Search Component. Still researching hooks vs 
             class and how it will fall together with the rest of the project */}
             <label className="Search-hidden" htmlFor="searchBar">Search</label>

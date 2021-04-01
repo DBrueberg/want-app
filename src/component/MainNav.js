@@ -12,6 +12,7 @@ import {NavLink} from 'react-router-dom'
 // Child Search component
 import Search from './Search';
 
+
 // The MainNav component is the standard main navigation of the application
 function MainNav({cartCount}) {
 

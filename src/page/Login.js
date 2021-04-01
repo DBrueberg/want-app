@@ -5,9 +5,13 @@
 // Last Edited (Initials, Date, Edits):
 // DAB - March 12, 2021 - Added changeHandler and states/ 
 // converted the Login function to a Login Class
+// DAB, 03/28/2021, Changed button stylings and added a new 
+//  "create account" Button
 
 // Importing React states to save variables
-import React, { useState } from 'react';
+import React from 'react';
+import {Button} from '@material-ui/core';
+import {NavLink} from 'react-router-dom';
 // Importing style sheet
 import '../stylesheet/Login.css';
 
@@ -16,11 +20,11 @@ class Login extends React.Component {
     // Constructor that will create a Login object
     constructor(props) {
         super(props);
-        // This class's state includes the loginName and password
+        // This class's state includes the userId and password
         this.state = {
-            loginName: '', 
+            userId: '', 
             password: ''
-        };
+        }
 
         // Binding the objects methods to the specific object
         this.changeHandler = this.changeHandler.bind(this);
@@ -29,7 +33,7 @@ class Login extends React.Component {
 
     // Validating the form. A form must have something entered before submission
     validateForm = () => {
-        return this.state.loginName.length > 0 && this.state.password.length > 0;
+        return this.state.userId.length > 0 && this.state.password.length > 0;
     }
 
     // This function handles all of the submissions
@@ -54,7 +58,7 @@ class Login extends React.Component {
 
         // DEBUG
         // console.log(`${name} and ${value}`);    
-        // console.log(`loginName is ${this.state.loginName}\npassword is ${this.state.password}`);
+        // console.log(`userId is ${this.state.userId}\npassword is ${this.state.password}`);
     }
 
     // Rendering the class using JSX
@@ -74,8 +78,8 @@ class Login extends React.Component {
                             <label htmlFor="formLoginUserName">
                                 User Id
                             </label>
-                            <input type="text" name="loginName" id="formLoginUserName" 
-                            value={this.loginName} onChange={this.changeHandler}></input>
+                            <input type="text" name="userId" id="formLoginUserName" 
+                            value={this.userId} onChange={this.changeHandler}></input>
                         </div>
                         
                         {/* Form input for password */}
@@ -88,11 +92,20 @@ class Login extends React.Component {
                         </div>
                         
                         {/* This button will submit the form */}
-                        <input type="submit" className="LoginSubmit" value="Login">
-                        </input>
+                        <Button type="submit" variant="contained" aria-label="Sign in">
+                            Sign in
+                        </Button>
+
+                        <NavLink to='/createAccount' style={{textDecoration: 'none'}}>
+                            <Button variant="contained" className="LoginNewAccount" 
+                            aria-label="Create account">
+                                Create Account
+                            </Button>
+                        </NavLink>
 
                     </fieldset>
                 </form>
+
                 
             </div>
         );

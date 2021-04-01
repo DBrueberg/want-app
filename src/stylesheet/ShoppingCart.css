@@ -23,4 +23,11 @@ Devin Brueberg
     flex-flow: row wrap;
     justify-content: space-around;
     margin: 1rem;
+    max-width: 100%;
+}
+
+/*  Max width will be 100%
+*/
+.shoppingCartCard {
+    max-width: 100%;
 }

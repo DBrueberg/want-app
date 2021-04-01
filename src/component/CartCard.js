@@ -10,6 +10,9 @@
 // for the app and importing needed components
 import React, {useState} from 'react';
 import '../stylesheet/CartCard.css';
+import UpdateIcon from '@material-ui/icons/Update';
+import DeleteOutlineIcon from '@material-ui/icons/DeleteOutline';
+import { Button } from '@material-ui/core';
 
 /**
  * The CartCard component generates the product cart cards and 
@@ -133,27 +136,44 @@ function CartCard({product=[], cart=[], addToCart=f=>f, removeFromCart=f=>f}) {
                 </li>
             </ul>
 
-            {/* Submit,quantity, and remove from cart form. It will 
-            alter the quantity of an item in the cart and pass the 
-            value to the parent by using call back method. Removal 
-            from the cart is also done via callback */}
-            <form onSubmit={submitHandler} className="cartInput">
+            <div className="cartCardUpdate">
+                {/* Submit,quantity, and remove from cart form. It will 
+                alter the quantity of an item in the cart and pass the 
+                value to the parent by using call back method. Removal 
+                from the cart is also done via callback */}
+                <form onSubmit={submitHandler} className="cartInput">
 
-                <label htmlFor="cartQuantity">
-                    Qty: 
-                </label>
-                <input type="text" className="cartCardQuantity" name="cartQuantity" 
-                value={quantity} onChange={changeHandler}></input>  
+                <div className="cartQuantity">
+                    <label htmlFor="cartQuantity">
+                        Qty: 
+                    </label>
+                    <input type="text" className="cartCardQuantity" name="cartQuantity" 
+                    value={quantity} onChange={changeHandler}></input> 
+                </div>
+                
 
-                <input type="submit" className="cartCardSubmit" 
-                value="Change Quantity" onSubmit={submitHandler}></input>
+                {/* <input type="submit" className="cartCardSubmit" 
+                value="Change Quantity" onSubmit={submitHandler}></input> */}
 
-            </form>
+                <Button type="submit" variant="contained" 
+                aria-label="Change shopping cart quantity" onSubmit={submitHandler}>
+                    Quantity<UpdateIcon />
+                </Button>
 
-            {/* This button uses a clickHandler that will remove an 
-            from the cart */}
-            <input type="button" className="cartCardRemove" 
-            value="Remove" onClick={clickHandler}></input>
+                </form>
+
+                {/* This button uses a clickHandler that will remove an 
+                from the cart */}
+                {/* <input type="button" className="cartCardRemove" 
+                value="Remove" onClick={clickHandler}></input> */}
+
+                <Button variant="contained" className="cartCardRemove" 
+                aria-label="Remove Item" onClick={clickHandler}>
+                Remove<DeleteOutlineIcon />
+                </Button>
+
+            </div>
+            
 
         </div>
     )

@@ -10,7 +10,9 @@
 // Using React library in order to build components 
 // for the app and importing needed components
 import React, {useState} from 'react';
-import '../stylesheet/Product.css'
+import '../stylesheet/Product.css';
+import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
+import { Button } from '@material-ui/core';
 
 /**
  * The Product component holds a current state and callbacks 
@@ -80,14 +82,23 @@ function Product({product=[], addToCart=f=>f}) {
             pass the value to the parent by using call back method */}
             <form onSubmit={submitHandler} className="productInput">
 
-                <label htmlFor="cartQuantity">
-                    Qty: 
-                </label>
-                <input type="text" className="ProductQuantity" 
-                name="cartQuantity" value={quantity} onChange={changeHandler}></input> 
+                <div className="cartQuantity">
+                    <label htmlFor="cartQuantity">
+                        Qty: 
+                    </label>
+                    <input type="text" className="ProductQuantity" 
+                    name="cartQuantity" value={quantity} onChange={changeHandler}></input> 
+                </div>
+                
 
-                <input type="submit" className="ProductSubmit" 
+                {/* <input type="submit" className="ProductSubmit" 
                 value="Add To Cart" onSubmit={submitHandler}></input>
+                <AddShoppingCartIcon color="orange" /> */}
+                {/* <IconButton type="submit" className="ProductSubmit" aria-label="add to shopping cart" onSubmit={submitHandler}>Hello<IconButton /> */}
+                <Button type="submit" variant="contained" 
+                aria-label="Add to shopping cart" onSubmit={submitHandler}>
+                    Add To Cart<AddShoppingCartIcon />
+                </Button>
 
             </form>
         </div>

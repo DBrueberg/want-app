@@ -11,6 +11,8 @@
 // DAB, 3/21/2021, Added removeFromCart() to remove items 
 //  from the cart
 //  Filled out some functional comments
+// DAB, 3/27/2021, Added the route to Checkout.js
+// DAB, 3/28/2021, Added the route to CreateAccount.js
 
 // Using React library in order to build components 
 // for the app
@@ -21,6 +23,8 @@ import Login from './page/Login';
 import Whoops404 from './page/Whoops404'
 import Home from './page/Home';
 import ShoppingCart from './page/ShoppingCart';
+import Checkout from './page/Checkout';
+import CreateAccount from './page/CreateAccount';
 // Uploading a JSON file array of products
 import * as data from './productData.json';
 
@@ -48,7 +52,6 @@ class App extends React.Component {
     this.addToCart = this.addToCart.bind(this);
     this.removeFromCart = this.removeFromCart.bind(this);
   }
-
 
 
   // The addToCart method will take in a product id and 
@@ -126,12 +129,9 @@ class App extends React.Component {
   // Rendering application
   render() {
     // Class state variables
-    const {products} = this.state;
-    const {cart} = this.state;
-
+    const {products, cart} = this.state;
     // Class Methods
-    const {addToCart} = this;
-    const {removeFromCart} = this;
+    const {addToCart, removeFromCart} = this;
 
     return (
       // Using a Switch and Route to traverse through the app
@@ -152,11 +152,17 @@ class App extends React.Component {
           to alter the cart state in App */}
           <Route path='/cart'>
             <ShoppingCart cart={cart} products={products} addToCart={addToCart} 
-            removeFromCart={removeFromCart}></ShoppingCart>
+            removeFromCart={removeFromCart} />
           </Route>
+
+          {/* The path to the checkout */}
+          <Route path='/checkout' component={Checkout} />
 
           {/* The Login component will allow a user to login to the application */}
           <Route path='/login' component={Login} />
+
+          {/* The create account page will allow the user to create a new account */}
+          <Route path='/createAccount' component={CreateAccount} />
 
           {/* The Whoops404 will handle any bad routes from the user */}
           <Route component={Whoops404} />

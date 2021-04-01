@@ -26,6 +26,7 @@ Devin Brueberg
 */
 .Login legend {
     font-size: 20px;
+    font-weight: bold;
     text-align: center;
 }
 
@@ -58,4 +59,20 @@ Devin Brueberg
     padding: .3rem 1rem;
     margin-top: .3rem;
     width: 15.5rem;
+}
+
+.Login Button {
+    font-weight: bold;
+    color: var(--button-text);
+    background: var(--orange-theme);
+    border: var(--button-border-width) solid var(--button-border);
+    padding: .15rem;
+    width: 15.5rem;
+    margin-top: .3rem;
+}
+
+/*  On hover the button background will change color
+*/
+.Login Button:hover {
+    background: black;
 }

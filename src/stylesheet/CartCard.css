@@ -4,6 +4,8 @@ Devin Brueberg
  Want Application - CartCard.css
  March 21, 2021
  Last Edited (Initials, Date, Edits):
+ DAB, 03/27/2021, Updated buttons to material ui 
+    components and altered the styling
  */
 
 /*  CartCards are the products in the cart, they 
@@ -21,21 +23,14 @@ Devin Brueberg
     justify-content: space-around;
     align-items: center;
     margin-top: 1rem;
+    padding: .5rem 0;
+    max-width: 100%;
 }
 
 /* Images will not be more than 200px wide
 */
 .cartCardImage {
     max-width: 200px;
-}
-
-/* Standard theme button styling
-*/
-.cartCardSubmit {
-    color: var(--button-text);
-    background: var(--orange-theme);
-    border: var(--button-border-width) solid var(--button-border);
-    padding: .15rem;
 }
 
 /* Card quantity input will display center
@@ -52,4 +47,40 @@ Devin Brueberg
     background: var(--orange-theme);
     border: var(--button-border-width) solid var(--button-border);
     padding: .15rem;
+}
+
+/* Standard theme button styling
+*/
+.CartCard Button {
+    font-weight: bold;
+    color: var(--button-text);
+    background: var(--orange-theme);
+    border: var(--button-border-width) solid var(--button-border);
+    padding: .15rem;
+    margin-top: .3rem;
+}
+
+/* On hover the background will change color
+*/
+.CartCard Button:hover {
+    background: black;
+}
+
+/* Card update fields will display flex for formatting
+*/
+.cartCardUpdate {
+    display: flex;
+    flex-flow: column nowrap;
+    align-content: center;
+    justify-content: center;
+    margin-top: auto;
+}
+
+/*  Card Quantity will have its own div and be centered 
+    flex
+*/
+.cartQuantity {
+    align-self: center;
+    justify-content: center;
+    display: flex;
 }

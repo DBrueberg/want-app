@@ -12,6 +12,7 @@ Devin Brueberg
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
+    max-width: 100%;
 }
 
 /* Images will not be larger than 200px 

@@ -1,0 +1,50 @@
+/*
+Devin Brueberg
+ CSC435 Adv Web App Development
+ Want Application - CartSummary.css
+ March 27, 2021
+ Last Edited (Initials, Date, Edits):
+ */
+
+ /* General cart summary layout will have a background 
+    so it stands out and flex
+*/
+.CartSummary {
+    background-color: lightgray;
+    display: flex;
+    justify-content: space-around;
+}
+
+/* The checkout button will be aligned center on the page
+*/
+.CartSummary a {
+    align-self: center;
+}
+
+/* The checkout button will follow the standard button theme
+*/
+.CartSummary Button {
+    font-weight: bold;
+    color: var(--button-text);
+    background: var(--orange-theme);
+    border: var(--button-border-width) solid var(--button-border);
+    padding: .2rem;
+}
+
+/*  On hover the button background will change color
+*/
+.CartSummary Button:hover {
+    background: black;
+}
+
+/************************ MEDIA QUERIES **************************/
+
+/*  This media query loads the grid column template for screens larger 
+    than 730px 
+*/
+@media screen and (max-width:730px) {
+    .CartSummary {
+        flex-flow: column nowrap;
+        padding-bottom: .5rem;
+    }
+}

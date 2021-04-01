@@ -21,3 +21,21 @@ Devin Brueberg
     color: var(--button-text);
     background: var(--orange-theme);
 }
+
+/************************ MEDIA QUERIES **************************/
+
+/*  This media query loads the grid column template for screens larger 
+    than 730px 
+*/
+@media screen and (max-width:730px) {
+
+    /* the nav will column and no wrap to fit the 
+       display
+    */
+
+    #navSearch {
+        display: flex;
+        flex-flow: column nowrap;
+        max-width: 100%;
+    }
+}

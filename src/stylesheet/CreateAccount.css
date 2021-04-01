@@ -1,0 +1,75 @@
+/*
+Devin Brueberg
+ CSC435 Adv Web App Development
+ Want Application - CreateAccount.css
+ March 28, 2021
+ Last Edited (Initials, Date, Edits):
+ */
+
+ /*  A max width is set for a responsive page
+ */
+.CreateAccount {
+    max-width: 100%;
+}
+
+/*  The main form is set to flex to be responsive
+    and centered
+*/
+.CreateAccount form {
+    display: flex;
+    justify-content: center;
+}
+
+/*  The fieldset is centered and the width is limited.
+    flex flow allows the form to be in a column and 
+    centered
+*/
+.CreateAccount fieldset {
+    border: 0;
+    width: 55%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-items: center;
+    align-items: center;
+}
+
+/*  The legend is centered and the text is enlarged
+*/
+.CreateAccount legend {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/*  The inputs are set to column so they stack
+*/
+.createAccountInput {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+/* The actual input fields get a responsive max width
+*/
+.createAccountInput input {
+    width: 15rem;
+}
+
+/*  The create account submit button will be the 
+    standard button color scheme but will be 
+    padded and a little wider
+*/
+.CreateAccount Button {
+    font-weight: bold;
+    color: var(--button-text);
+    background: var(--orange-theme);
+    border: var(--button-border-width) solid var(--button-border);
+    padding: .15rem;
+    width: 15.5rem;
+    margin-top: .3rem;
+}
+
+/*  On hover the button background will change color
+*/
+.CreateAccount Button:hover {
+    background: black;
+}
