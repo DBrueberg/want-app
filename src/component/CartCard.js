@@ -5,10 +5,12 @@
 // Last Edited (Initials, Date, Edits):
 // DAB, 3/21/2021, Added removeFromCart() and 
 //  filled in comments.
+// DAB, 4/05/2021, Added hook that will reRender 
+//  on cart updates to display the correct quantity
 
 // Using React library in order to build components 
 // for the app and importing needed components
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import '../stylesheet/CartCard.css';
 import UpdateIcon from '@material-ui/icons/Update';
 import DeleteOutlineIcon from '@material-ui/icons/DeleteOutline';
@@ -31,6 +33,12 @@ function CartCard({product=[], cart=[], addToCart=f=>f, removeFromCart=f=>f}) {
     // The quantity state is managed by this hook in order to 
     // change it in the quantity input
     const [quantity, setQuantity] = useState(item);
+
+    // The useEffect will reRender the component when the cart
+    // contents are changed
+    useEffect(() => {
+        setQuantity(item)
+    }, [cart]);
 
 
     // The submitHandler will pass up the cart data 
@@ -143,6 +151,7 @@ function CartCard({product=[], cart=[], addToCart=f=>f, removeFromCart=f=>f}) {
                 from the cart is also done via callback */}
                 <form onSubmit={submitHandler} className="cartInput">
 
+                {/* This dive will display and allow the user to change the cart quantity */}
                 <div className="cartQuantity">
                     <label htmlFor="cartQuantity">
                         Qty: 
@@ -155,6 +164,7 @@ function CartCard({product=[], cart=[], addToCart=f=>f, removeFromCart=f=>f}) {
                 {/* <input type="submit" className="cartCardSubmit" 
                 value="Change Quantity" onSubmit={submitHandler}></input> */}
 
+                {/* This button will submit the new quantity */}
                 <Button type="submit" variant="contained" 
                 aria-label="Change shopping cart quantity" onSubmit={submitHandler}>
                     Quantity<UpdateIcon />
@@ -164,9 +174,6 @@ function CartCard({product=[], cart=[], addToCart=f=>f, removeFromCart=f=>f}) {
 
                 {/* This button uses a clickHandler that will remove an 
                 from the cart */}
-                {/* <input type="button" className="cartCardRemove" 
-                value="Remove" onClick={clickHandler}></input> */}
-
                 <Button variant="contained" className="cartCardRemove" 
                 aria-label="Remove Item" onClick={clickHandler}>
                 Remove<DeleteOutlineIcon />
