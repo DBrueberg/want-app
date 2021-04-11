@@ -13,6 +13,7 @@
 //  Filled out some functional comments
 // DAB, 3/27/2021, Added the route to Checkout.js
 // DAB, 3/28/2021, Added the route to CreateAccount.js
+// DAB, 4/09/2021, Added the route to Invoice.js
 
 // Using React library in order to build components 
 // for the app
@@ -25,6 +26,7 @@ import Home from './page/Home';
 import ShoppingCart from './page/ShoppingCart';
 import Checkout from './page/Checkout';
 import CreateAccount from './page/CreateAccount';
+import Invoice from './page/Invoice';
 // Uploading a JSON file array of products
 import * as data from './productData.json';
 
@@ -52,6 +54,8 @@ class App extends React.Component {
     this.addToCart = this.addToCart.bind(this);
     this.removeFromCart = this.removeFromCart.bind(this);
   }
+
+  
 
 
   // The addToCart method will take in a product id and 
@@ -156,13 +160,18 @@ class App extends React.Component {
           </Route>
 
           {/* The path to the checkout */}
-          <Route path='/checkout' component={Checkout} />
-
+          <Route path='/checkout'>
+            <Checkout cart={cart} products={products} />
+          </Route>  
+          
           {/* The Login component will allow a user to login to the application */}
           <Route path='/login' component={Login} />
 
           {/* The create account page will allow the user to create a new account */}
           <Route path='/createAccount' component={CreateAccount} />
+
+          {/* The invoice page will display an invoice of the completed order */}
+          <Route path='/invoice' component={Invoice} />
 
           {/* The Whoops404 will handle any bad routes from the user */}
           <Route component={Whoops404} />

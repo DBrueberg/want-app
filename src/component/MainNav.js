@@ -3,19 +3,24 @@
 // Want Application - MainNav.js
 // March 14, 2021
 // Last Edited (Initials, Date, Edits):
+// DAB, 04/11/2021, Changed the explicitly passed 
+//  cartCount to the useContext(CartCounter) hook
 
 // Using React library in order to build components 
 // for the app and import needed components
-import React from 'react';
+import React, {useContext} from 'react';
 import '../stylesheet/MainNav.css';
 import {NavLink} from 'react-router-dom'
 // Child Search component
 import Search from './Search';
+import {CartCounter} from '../component/PageTemplate'
 
 
 // The MainNav component is the standard main navigation of the application
-function MainNav({cartCount}) {
-
+function MainNav() {
+    // Using the hook useContext calculated in the PageTemplate page to retrieve 
+    // the cart length
+    const cartCount = useContext(CartCounter);
 
     return (
         <nav className="MainNav">
@@ -46,7 +51,6 @@ function MainNav({cartCount}) {
                     <NavLink to='/login'>
                         Login/Logout
                     </NavLink>
-                    
                 </li>
             </ul>
         </nav>

@@ -26,7 +26,6 @@ import { Button } from '@material-ui/core';
  * @returns 
  */
 function CartCard({product=[], cart=[], addToCart=f=>f, removeFromCart=f=>f}) {
-
     // The item const will call getInitialQuantity in order to set the 
     // initial quantity state of this cart card
     const item = getInitialQuantity(cart, product);
@@ -181,7 +180,6 @@ function CartCard({product=[], cart=[], addToCart=f=>f, removeFromCart=f=>f}) {
 
             </div>
             
-
         </div>
     )
 }

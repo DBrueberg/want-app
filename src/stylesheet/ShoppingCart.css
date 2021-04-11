@@ -12,6 +12,7 @@ Devin Brueberg
     margin: auto;
     border: solid black 2px;
     max-width: 100%;
+    padding-bottom: 1rem;
 }
 
 /*  The shopping cart product cards will 
@@ -22,12 +23,11 @@ Devin Brueberg
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
-    margin: 1rem;
-    max-width: 100%;
+    width: 100%;
 }
 
 /*  Max width will be 100%
 */
 .shoppingCartCard {
-    max-width: 100%;
+    max-width: 98%;
 }

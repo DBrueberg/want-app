@@ -5,12 +5,15 @@
 // Last Edited (Initials, Date, Edits):
 // DAB, 03/29/2021, Added comments and styles to the 
 // component
-// DAB, 04/05/2021, Fine tuned the component lifecycle
+// DAB, 04/05/2021, Fine tuned the component lifecycle.
+// DAB, 04/08/2021, Added in a NavLink to the Invoice 
+//  Component. It will mimic a purchase and generate an 
+//  invoice.
 
 // Using React library in order to build components 
 // for the app and importing needed components
 import React from 'react';
-import { Button } from '@material-ui/core';
+import {Button} from '@material-ui/core';
 import {NavLink} from 'react-router-dom';
 import '../stylesheet/CartSummary.css';
 

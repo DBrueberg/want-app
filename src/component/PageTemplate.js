@@ -6,6 +6,8 @@
 // DAB, 03/22/2021, Added a callback function to App
 //  in order to retrieve the # of cart items and pass 
 //  it back into the MainNav (Pass props to a sibling)
+// DAV, 04/11/2021, Added in a CartCounter createContext
+// in order to pass down the [cart] length
 
 // Using React library in order to build components 
 // for the app and importing needed components
@@ -13,6 +15,9 @@ import React, {useState} from 'react';
 import MainNav from './MainNav';
 import Footer from './Footer';
 import App from '../App';
+
+// Creating and exporting the context for CartCounter wrapper
+export const CartCounter = React.createContext();
 
 // This function will build a page template that accepts 
 // children sandwiched between the main navigation and 
@@ -38,8 +43,12 @@ function PageTemplate() {
     return (
         <div className="page">
             {/* The cart count is retrieved from in the App component and 
-            passed back into the sibling MainNav component */}
-            <MainNav cartCount={cartCount}/>
+            passed back into the sibling MainNav component. MainNav is 
+            wrapped in a provider that allows the retrieval of the cartCount
+            without it being explicitly passed down */}
+            <CartCounter.Provider value={cartCount}>
+                <MainNav />   
+            </CartCounter.Provider>
             <App getCartCount={getCartCount} />
             <Footer />
         </div>

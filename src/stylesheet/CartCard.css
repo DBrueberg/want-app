@@ -18,8 +18,7 @@ Devin Brueberg
     border: 2px solid var(--orange-theme);
     border-radius: 1rem;
     width: 25rem;
-    height: 30rem;
-    flex-shrink: 1 0 auto;
+    height: 34.5rem;
     justify-content: space-around;
     align-items: center;
     margin-top: 1rem;
@@ -38,6 +37,7 @@ Devin Brueberg
 .cartCardQuantity {
     width: 2rem;
     text-align: center;
+    margin-top: auto;
 }
 
 /* Standard theme button styling
@@ -83,4 +83,24 @@ Devin Brueberg
     align-self: center;
     justify-content: center;
     display: flex;
+}
+
+/*  Max width of the productInfo table will be 100%
+*/
+ul.product li {
+    max-width: 100%;
+} 
+
+/*  Disc style list type
+*/
+ul.product li {
+    list-style-type: disc;
+}
+
+/*  Max width of the productInfo li will be 80%
+*/
+ul.product {
+    width: 80%;
+    margin: 0;
+    padding: 2rem;
 }

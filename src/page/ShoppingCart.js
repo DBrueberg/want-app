@@ -5,6 +5,8 @@
 // Last Edited (Initials, Date, Edits):
 // DAB, 3/31/2021, Added CartSummary.js component
 // DAB, 4/05/2021, Added in some comments
+// DAB, 4/7/2021, Added dynamic to CartSummary, will 
+//  display only if there are items in the cart
 
 // Using React library in order to build components 
 // for the app and importing needed components
@@ -92,6 +94,11 @@ function ShoppingCart({cart=[], products=[], removeFromCart=f=>f, addToCart=f=>f
         </div> 
     )
 
+    // If the cart has items in it the CartSummary will display, if not there will be no 
+    // cart summary
+    const displaySummary = (cartList.length > 0) ?
+    <CartSummary cartList={newCart(cart)} cartSize={cart.length} cart={cart} /> : 
+    null;
 
     return (
         
@@ -102,7 +109,7 @@ function ShoppingCart({cart=[], products=[], removeFromCart=f=>f, addToCart=f=>f
             
             {/* The CartSummary will allow the user to go to the Checkout page and will */}
             {/* display the current cart total */}
-            <CartSummary cartList={newCart(cart)} cartSize={cart.length} cart={cart} />
+            {displaySummary}
 
             <h1>
                 {/* Displaying the cart header base off if items are in the cart or not  */}

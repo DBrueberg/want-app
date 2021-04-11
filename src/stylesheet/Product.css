@@ -14,15 +14,19 @@ Devin Brueberg
 .Product {
     display: flex;
     flex-flow: column nowrap;
-    border: 2px orange solid;
+    border: 2px var(--orange-theme) solid;
     border-radius: 1rem;
     width: 25rem;
-    height: 30rem;
-    /* flex-shrink: 1 0 auto; */
+    max-width: 100%;
+    max-height: 100%;
     max-width: 100%;
     justify-content: space-around;
     align-items: center;
     margin-top: 1rem;
+}
+
+.Products {
+    max-width: 100%;
 }
 
 /*  The product thumb images will not be more than 
@@ -44,6 +48,8 @@ Devin Brueberg
 .productInput {
     display: flex;
     flex-flow: column nowrap;
+    margin-top: auto;
+    margin-bottom: .3rem;
 }
 
 /* The cart quantity will be centered with a little padding
@@ -62,6 +68,26 @@ Devin Brueberg
     background: var(--orange-theme);
     border: var(--button-border-width) solid var(--button-border);
     padding: .15rem;
+}
+
+/*  Max width of the productInfo table will be 100%
+*/
+ul.productInfo li {
+    max-width: 100%;
+} 
+
+/*  Disc style list type
+*/
+ul.productInfo li {
+    list-style-type: disc;
+}
+
+/*  Max width of the productInfo li will be 80%
+*/
+ul.productInfo {
+    width: 80%;
+    margin: 0;
+    padding: 2rem;
 }
 
 /*  On hover the button background will change color

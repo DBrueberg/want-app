@@ -61,6 +61,8 @@ Devin Brueberg
     width: 15.5rem;
 }
 
+/*  Styling the button
+*/
 .Login Button {
     font-weight: bold;
     color: var(--button-text);

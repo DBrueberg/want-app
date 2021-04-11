@@ -1,0 +1,106 @@
+/*
+Devin Brueberg
+CSC435 Adv Web App Development
+Want Application - Checkout.css
+April 10, 2021
+Last Edited (Initials, Date, Edits):
+*/
+
+/*  The Checkout general theme
+*/
+.Checkout {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+}
+
+/*  The main content of the checkout page will 
+    display in grid
+*/
+.checkoutGridContainer {
+    display: grid;
+    grid-template-columns: 68% 30%;
+    grid-template-rows: 1fr;
+    gap: 0rem 1rem;
+    width: 100%;
+}
+
+/*  The checkout data will display in flex
+*/
+.checkoutFlexContainer {
+    grid-area: 1 / 1 / 2 / 2;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/*  A max width is set for a responsive page
+*/
+.checkoutSummary {
+   grid-area: 1 / 2 / 2 / 3; 
+   max-width: 100%;
+}
+
+/*  The summary will display flex column and wrap
+*/
+ul.checkoutSummary {
+    display: flex;
+    flex-flow: column wrap;
+    align-content: center;
+    padding-left: 0;
+    max-width: 100%;
+}
+
+/*  The checkoutItem's will display in standard 
+    theme and flex to the left of the purchase info
+*/
+.checkoutItem {
+    border: var(--button-border-width) solid var(--button-border);
+    color: var(--button-text);
+    background: var(--orange-theme);
+    font-weight: bold;
+    margin: 1rem;
+    width: 25rem;
+}
+
+/*  Styling the button
+*/
+.Checkout Button {
+    font-weight: bold;
+    color: var(--button-text);
+    background: var(--orange-theme);
+    border: var(--button-border-width) solid var(--button-border);
+    padding: .15rem;
+    width: 15.5rem;
+    margin-top: .3rem;
+}
+
+/*  On hover the button background will change color
+*/
+.Checkout Button:hover {
+    background: black;
+}
+
+/************************ MEDIA QUERIES **************************/
+
+/*  This media query loads the grid column template for screens larger 
+    than 515px 
+*/
+@media screen and (max-width:400px) {
+    /*  The checkoutGridContainer will display in flex 
+        for smaller screens
+    */
+    .checkoutGridContainer {
+        display: flex;
+        flex-flow: column nowrap;
+    }
+
+    /*  The checkout button will be centered
+    */
+    .checkoutSummary li {
+        margin: auto;
+    }
+}

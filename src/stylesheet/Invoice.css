@@ -1,0 +1,141 @@
+/*
+Devin Brueberg
+CSC435 Adv Web App Development
+Want Application - Invoice.css
+April 10, 2021
+Last Edited (Initials, Date, Edits):
+*/
+
+/*  The max Invoice width will be 100%
+*/
+.Invoice {
+    max-width: 100%;
+}
+
+/* The invoiceInfo will be displayed in grid 
+and styled for aesthetics
+*/
+.invoiceInfo {
+    background: lightgrey;
+    border: 1px solid black;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0rem 10rem;
+    justify-content: space-between;
+    padding: .5rem;
+    margin: .5rem;
+    margin: auto;
+    margin-bottom: 1rem; 
+}
+
+/* The invoiceInfo will not have list 
+stylings
+*/
+.invoiceInfo ul, li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* The element will fill this grid spot  
+*/
+.invoiceInfoTopLeft {
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+/* The element will fill this grid spot  
+*/
+.invoiceInfoTopRight {
+    grid-area: 1 / 2 / 2 / 3;
+    justify-self: end;
+    min-width: 15rem;
+}
+
+/* The element will fill this grid spot  
+*/
+.invoiceInfoBottomLeft {
+    grid-area: 2 / 1 / 3 / 2;
+}
+
+/* The element will fill this grid spot  
+*/
+.invoiceInfoBottomRight {
+    grid-area: 2 / 2 / 3 / 3;
+    justify-self: end;
+}
+
+/*  The invoiceFlexContainer will display its 
+    items flex and column. This allows for 
+    screen scaling
+*/
+.invoiceFlexContainer {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+/*  The .invoice will be a column flex with a black 
+    border so it stands out better
+*/
+.invoice {
+    display: flex;
+    flex-flow: column nowrap;
+    align-self: center;
+    border: 2px solid black;
+}
+
+
+/*  The .invoiceTable components will have a common
+    theme
+*/
+.invoiceTable table, tr, th, td {
+    background: var(--orange-theme);
+    color: var(--button-text);
+    text-align: center;
+    /* border: 2px solid var(--orange-theme); */
+    border: var(--button-border-width) solid var(--button-border);
+    padding: .1rem;
+}
+
+/*  The .invoiceTable headers will be bold and black
+*/
+.invoiceTable th {
+    font-weight: bold;
+    color: black;
+}
+
+/*  The .invoiceTotal will display in line with the 
+    .invoiceTable at the bottom right corner
+*/
+.invoiceTotal {
+    border: 2px solid white;
+    color: black;
+    font-weight: bold;
+    background: var(--orange-theme);
+    padding: 1rem .1rem .1rem .1rem;
+    align-self: flex-end;
+}
+
+/* The spans will be bold 
+*/
+.invoiceBold {
+    font-weight: bold;
+}
+
+/************************ MEDIA QUERIES **************************/
+
+/*  This media query loads the grid column template for screens larger 
+    than 515px 
+*/
+@media screen and (max-width:515px) {
+
+    /*  The .invoiceInfo will be adjusted to flex when the screen 
+        is under 515px wide
+    */
+    .invoiceInfo {
+        display: flex;
+        flex-flow: column nowrap;
+        max-width: 100%;
+    }
+}
