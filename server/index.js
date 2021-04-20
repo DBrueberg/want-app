@@ -44,7 +44,7 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 // The proxy server will run on port 5000
-const PORT = process.env.PORT || 8000;
+const PORT = process.env.PORT || 5000;
 
 // Listening to the port
 app.listen(PORT, () => {
