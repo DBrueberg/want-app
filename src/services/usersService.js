@@ -61,7 +61,9 @@ async function loginUser(loginInfo) {
 async function addUser(user) {
   let result = await axios.post(`/api/users`, user)
     .then((res) => {
-      console.log(res.data)
+      console.log("User Added Successfully")
+      // DEBUG
+      // console.log(res.data)
     }).catch((error) => {
       console.log(error)
     });

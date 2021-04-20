@@ -28,28 +28,16 @@ app.use(bodyParser.json());
 require('../routes/productRoutes')(app);
 require('../routes/usersRoutes')(app)
 
-// // Allows express to look up directories using static
-// if (process.env.NODE_ENV === 'production') {
-//   app.use(express.static('client/build'));
-
-//   // Initializing the path
-//   const path = require('path');
-
-//   // A template for all get requests filenames
-//   app.get('*', (req,res) => {
-//       res.sendFile(path.resolve('/', 'public', 'index.html'))
-//   })
-
-// }
-
 // Allows express to look up directories using static
 if (process.env.NODE_ENV === 'production') {
+  // Here is where you include the build path of the static app
   app.use(express.static('build'));
 
   // Initializing the path
   const path = require('path');
 
-  // A template for all get requests filenames
+  // A template for all get requests filenames, set to link to the 
+  // index.html after the build
   app.get('*', (req,res) => {
       res.sendFile(path.resolve(__dirname, 'build', 'index.html'))
   })
