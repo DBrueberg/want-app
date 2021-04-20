@@ -31,7 +31,7 @@
     "client": "react-scripts start",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "server": "node-env-run server --exec nodemon | pino-colada",
+    "server": "node-env-run server --exec nodemon",
     "dev": "npm-run-all -p server client"
   },
   "proxy": "http://localhost:80/",
