@@ -30,7 +30,6 @@ require('../routes/usersRoutes')(app)
 
 // Allows express to look up directories using static
 if (process.env.NODE_ENV === 'production') {
-  app.use(express.static('public'));
   app.use(express.static('client/build'));
 
   // Initializing the path
