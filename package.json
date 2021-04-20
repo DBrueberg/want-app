@@ -23,7 +23,8 @@
     "uuid": "^8.3.2",
     "validator": "^13.5.2",
     "web-vitals": "^1.1.0",
-    "npm-run-all": "^4.1.5"
+    "npm-run-all": "^4.1.5",
+    "node-env-run": "^4.0.2"
   },
   "scripts": {
     "start": "npm-run-all -p server client",
@@ -31,7 +32,7 @@
     "client": "react-scripts start",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "server": "node-env-run server --exec nodemon",
+    "server": "node-env-run -p server --exec nodemon",
     "dev": "npm-run-all -p server client"
   },
   "proxy": "http://localhost:80/",
