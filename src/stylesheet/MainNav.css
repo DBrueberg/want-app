@@ -4,6 +4,7 @@ Devin Brueberg
  Assignment 1 - MainNav.css for MainNav.js component
  March 14, 2021
  Last Edited (Initials, Date, Edits):
+    DAB, 4/19/2021, Added mimicLink for span
  */
 
  /* The MainNav default will be grid so the logo and 
@@ -48,6 +49,21 @@ Devin Brueberg
     flex-flow: wrap row;
     justify-content: space-evenly;
     align-items: center;
+}
+
+/*  Mimic link style for the span
+*/
+.mimicLink {
+    cursor:pointer;
+    color:#551A8B;
+    text-decoration:underline;
+}
+
+/*  Mimic link style for the span
+*/
+.mimicLink span:hover {
+    text-decoration:none;
+    text-shadow: 1px 1px 1px #555;
 }
 
 /************************ MEDIA QUERIES **************************/

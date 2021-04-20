@@ -4,6 +4,8 @@
 // April 9, 2021
 // Last Edited (Initials, Date, Edits):
 // DAB, 04/10/2021, Added descriptive comments
+// DAB, 04/18/2021, Added USER_LOG_IN and 
+//  USER_LOG_OUT. Edited ADD_USER
 
 // Using React library in order to build components 
 // for the app and importing needed components
@@ -17,12 +19,12 @@ export const user = (state = {}, action) => {
         // the state
         case C.ADD_USER:
             return {
+                ...state,
                 id: action.id,
                 firstName: action.firstName,
                 lastName: action.lastName,
                 userId: action.userId,
                 password: action.password,
-                isLoggedIn: action.isLoggedIn,
                 access: action.access
             }
 
@@ -33,6 +35,20 @@ export const user = (state = {}, action) => {
                 ...state,
                 firstName: action.firstName,
                 lastName: action.lastName
+            }
+
+        // USER_LOG_IN will log in the current user
+        case C.USER_LOG_IN:
+            return {
+                ...state,
+                isLoggedIn: true
+            }
+
+        // USER_LOG_OUT will log out the current user
+        case C.USER_LOG_OUT:
+            return {
+                ...state,
+                isLoggedIn: false
             }
 
         // EDIT_USER_PASSWORD will edit the current 

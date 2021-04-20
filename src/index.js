@@ -19,11 +19,18 @@ import reportWebVitals from './reportWebVitals';
 import storeFactory from './store';
 import stateData from './initialState';
 
+// DEBUG IMPORT
+// import Test from './Test'
+
+
 // Using the storeFactory to create a store with default 
 // stateData
 const store = storeFactory(stateData);
 
 ReactDOM.render(
+  // DEBUG COMPONENT
+  // <Test />
+  
   // This store will allow the entire application to access the 
   // store either by using connect or passing down the store
   <Provider store={store}>
@@ -32,7 +39,8 @@ ReactDOM.render(
     <BrowserRouter>
         <PageTemplate />
     </BrowserRouter> 
-  </Provider>,
+  </Provider>
+  ,
   document.getElementById('root')
 );
 

@@ -64,9 +64,9 @@ function Invoice(props) {
         invoices[invoices.length - 1] : 
         invoices;
 
+    // Creating a new data object from the invoice date
     const date = new Date(invoice.date);
 
-   
     // Initializing the invoiceDate to display the mm/dd/yyyy 
     // date of the invoice. If there is no date, "no date" is 
     // displayed

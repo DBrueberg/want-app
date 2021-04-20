@@ -4,6 +4,8 @@
 // April 9, 2021
 // Last Edited (Initials, Date, Edits):
 //  DAB, 04/10/2021, Added comments
+//  DAB, 04/18/2021, Added in USER_LOG_IN and 
+// USER_LOG_OUT
 
 // These constants ensure that there will be no 
 // spelling errors when working with reducers.js 
@@ -11,6 +13,8 @@
 // action types.
 const constants = {
     ADD_USER: "ADD_USER",
+    USER_LOG_IN: "USER_LOG_IN",
+    USER_LOG_OUT: "USER_LOG_OUT",
     EDIT_USER_PASSWORD: "EDIT_USER_PASSWORD",
     EDIT_USER_NAME: "EDIT_USER_NAME",
     EDIT_USER_ID: "EDIT_USER_ID",

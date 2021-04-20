@@ -6,7 +6,7 @@
             "userId": "user1",
             "password": "password",
             "isLoggedIn": false,
-            "access": "admin"
+            "access": "general"
     },
     "products": [
         {
