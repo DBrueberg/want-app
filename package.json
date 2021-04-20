@@ -33,6 +33,7 @@
     "dev": "run-p server start",
     "client": "npm run start --prefix client"
   },
+  "proxy": "https://want-app.herokuapp.com",
   "eslintConfig": {
     "extends": [
       "react-app",
