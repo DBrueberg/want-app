@@ -31,13 +31,14 @@
     "express": "^4.17.1"
   },
   "scripts": {
-    "start": "npm-run-all -p server client",
+    "start": "react-scripts start",
     "build": "react-scripts build",
-    "client": "react-scripts start",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "server": "node-env-run server --exec nodemon"
+    "server": "node-env-run server --exec nodemon | pino-colada",
+    "dev": "run-p server start"
   },
+  "proxy": "http://localhost:5000/",
   "eslintConfig": {
     "extends": [
       "react-app",
