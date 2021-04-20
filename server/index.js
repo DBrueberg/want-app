@@ -28,9 +28,9 @@ app.use(bodyParser.json());
 require('../routes/productRoutes')(app);
 require('../routes/usersRoutes')(app)
 
-
 // Allows express to look up directories using static
 if (process.env.NODE_ENV === 'production') {
+  app.use(express.static('public'));
   app.use(express.static('client/build'));
 
   // Initializing the path
@@ -38,10 +38,24 @@ if (process.env.NODE_ENV === 'production') {
 
   // A template for all get requests filenames
   app.get('*', (req,res) => {
-      res.sendFile(path.resolve('/', 'public', 'index.html'))
+      res.sendFile(path.resolve('/', 'index.html'))
   })
 
 }
+
+// // Allows express to look up directories using static
+// if (process.env.NODE_ENV === 'production') {
+//   app.use(express.static('client/build'));
+
+//   // Initializing the path
+//   const path = require('path');
+
+//   // A template for all get requests filenames
+//   app.get('*', (req,res) => {
+//       res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'))
+//   })
+
+// }
 
 // The proxy server will run on port 5000
 const PORT = process.env.PORT || 5000;
