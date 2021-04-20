@@ -10,7 +10,7 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 
 // Import models
-require('../models/Product');
+require('../models/product');
 require('../models/users')
 
 // Initializing express
