@@ -9,10 +9,17 @@
     "@testing-library/react": "^11.2.5",
     "@testing-library/user-event": "^12.8.3",
     "axios": "^0.21.1",
+    "body-parser": "^1.19.0",
     "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "http-proxy-middleware": "^1.2.0",
+    "json-loader": "^0.5.7",
     "mongodb": "^3.6.6",
     "mongodb-client-encryption": "^1.2.3",
     "mongoose": "^5.12.4",
+    "node-env-run": "^4.0.2",
+    "nodemon": "^2.0.7",
+    "npm-run-all": "^4.1.5",
     "passport": "^0.4.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
@@ -22,13 +29,7 @@
     "react-scripts": "4.0.3",
     "uuid": "^8.3.2",
     "validator": "^13.5.2",
-    "web-vitals": "^1.1.0",
-    "npm-run-all": "^4.1.5",
-    "node-env-run": "^4.0.2",
-    "nodemon": "^2.0.7",
-    "json-loader": "^0.5.7",
-    "body-parser": "^1.19.0",
-    "express": "^4.17.1"
+    "web-vitals": "^1.1.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -38,7 +39,6 @@
     "server": "node-env-run server --exec nodemon | pino-colada",
     "dev": "run-p server start"
   },
-  "proxy": "http://localhost:5000/",
   "eslintConfig": {
     "extends": [
       "react-app",

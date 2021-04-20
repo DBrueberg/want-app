@@ -63,3 +63,13 @@
       "pino-colada": "^2.1.0"
     }
   }
+
+  // NEWEST DEP
+  "scripts": {
+    "start": "npm-run-all -p server client",
+    "build": "react-scripts build",
+    "client": "react-scripts start",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "server": "node-env-run server --exec nodemon"
+  },
