@@ -39,7 +39,7 @@
     "server": "node-env-run server --exec nodemon",
     "dev": "npm-run-all -p server client"
   },
-  "proxy": "http://localhost:8000/",
+  "proxy": "https://want-app.herokuapp.com/",
   "eslintConfig": {
     "extends": [
       "react-app",

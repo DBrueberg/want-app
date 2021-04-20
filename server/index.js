@@ -28,6 +28,7 @@ app.use(bodyParser.json());
 require('../routes/productRoutes')(app);
 require('../routes/usersRoutes')(app)
 
+
 // Allows express to look up directories using static
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static('client/build'));
