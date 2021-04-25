@@ -18,7 +18,7 @@ const app = express();
 
 // Connecting to mongoose and enabling global.Promise
 mongoose.Promise = global.Promise;
-mongoose.connect(process.env.MONGODB_URI || `mongodb://localhost:27017/node-react-starter`,
+mongoose.connect(process.env.MONGODB_URI || `mongodb://localhost:27017/applicationdb`,
 {useNewUrlParser: true, useUnifiedTopology: true});
 
 // Express will use the bodyParser.json

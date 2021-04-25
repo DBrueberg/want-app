@@ -54,8 +54,6 @@ function MainNav(props) {
 
     return (
         <nav className="MainNav">
-            {console.log("LOGGED IN")}
-            {console.log(user.isLoggedIn)}
             {/* The main logo of the WANT application */}
             <div id="MainNav-logo">
                 <img src="wantThumb.jpeg" alt="Want Logo"></img>
